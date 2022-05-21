@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  postgres_host: 10.108.145.179
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-05-28T16:42:15Z"
+  name: hostname-config
+  namespace: default
+  resourceVersion: "157524"
+  uid: f0f92661-3099-4ae3-bfef-0ae038da3361

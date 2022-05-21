@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2022-05-28T17:13:38Z"
+  labels:
+    app: myapp-d
+  name: myapp-d
+  namespace: default
+  resourceVersion: "159141"
+  uid: 97c923ec-c719-4db3-9214-709f608ccd1a
+spec:
+  clusterIP: 10.96.31.207
+  clusterIPs:
+  - 10.96.31.207
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 30549
+    port: 8000
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app: myapp
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
